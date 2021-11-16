@@ -22,13 +22,13 @@ public class BoardCommand extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    boardSubsystem.setMotor(1);
+    
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-
+    boardSubsystem.setMotor(1);
   }
 
   // Called once the command ends or is interrupted.
