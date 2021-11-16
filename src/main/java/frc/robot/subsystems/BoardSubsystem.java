@@ -38,7 +38,7 @@ public class BoardSubsystem implements Subsystem {
   }
 
   public boolean getSwitchValue() {
-    limitSwitch.get();
+    return limitSwitch.get();
   }
 
   public Ultrasonic getUltrasonic() {
