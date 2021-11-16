@@ -14,4 +14,7 @@ package frc.robot;
  */
 public final class Constants {
     public static int boardMotorPort = 12;
+    public static int pingChannelPort = 13;
+    public static int echoChannelPort = 14;
+    public static int digitalSwitchPort = 15;
 }
