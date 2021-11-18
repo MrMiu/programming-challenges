@@ -1,7 +1,3 @@
-// Copyright (c) FIRST and other WPILib contributors.
-// Open Source Software; you can modify and/or share it under the terms of
-// the WPILib BSD license file in the root directory of this project.
-
 package frc.robot.subsystems;
 
 import com.revrobotics.CANSparkMax;
@@ -16,7 +12,7 @@ public class BoardSubsystem implements Subsystem {
   DigitalInput limitSwitch;
   Ultrasonic ultrasonic;
 
-  /** Creates a new ExampleSubsystem. */
+  /** Creates a new Subsystem. */
   public BoardSubsystem(CANSparkMax motor, DigitalInput limitSwitch, Ultrasonic ultrasonic) {
     this.motor = motor;
     this.limitSwitch = limitSwitch;
@@ -31,10 +27,6 @@ public class BoardSubsystem implements Subsystem {
 
   public void setMotor(double val) { 
     motor.set(val);
-  }
-
-  public void stopMotor() {
-    motor.set(0);
   }
 
   public DigitalInput getLimitSwitch() {
