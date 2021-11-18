@@ -21,11 +21,6 @@ public class BoardCommand extends CommandBase {
   }
 
   // Called every time the scheduler runs while the command is scheduled.
-  @Override
-  public void execute() {
-    SmartDashboard.putNumber("Ultrasonic: ", boardSubsystem.getUltrasonicValue()); 
-    boardSubsystem.setMotor(0.5);
-  }
 
   // Called once the command ends or is interrupted.
   @Override
