@@ -30,7 +30,7 @@ public class BoardCommand extends CommandBase {
     }
     // This might though
     SmartDashboard.putNumber("Ultrasonic: ", boardSubsystem.getUltrasonicValue()); 
-    boardSubsystem.setMotor(0);
+    boardSubsystem.setMotor(0.5);
   }
 
   // Called once the command ends or is interrupted.
