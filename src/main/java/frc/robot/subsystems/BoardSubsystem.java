@@ -13,13 +13,6 @@ public class BoardSubsystem implements Subsystem {
   Ultrasonic ultrasonic;
 
   /** Creates a new Subsystem. */
-  public BoardSubsystem(CANSparkMax motor, DigitalInput limitSwitch, Ultrasonic ultrasonic) {
-    this.motor = motor;
-    this.limitSwitch = limitSwitch;
-    this.ultrasonic = ultrasonic;
-
-    Ultrasonic.setAutomaticMode(true);
-  }
 
   public CANSparkMax getMotor() {
     return motor;
