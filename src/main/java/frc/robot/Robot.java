@@ -59,6 +59,9 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousPeriodic() {}
 
+  /** This function is called during the initalization of the teleop period of a game
+   *  This is where your code will be tested in this challenge 
+   */
   @Override
   public void teleopInit() {
     robotContainer.getBoardCommand().schedule();
