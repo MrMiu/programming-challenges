@@ -10,7 +10,7 @@ public class BoardSubsystem implements Subsystem {
   CANSparkMax motor;
   DigitalInput limitSwitch;
 
-  public BoardSubsystem() {
+  public BoardSubsystem(CANSparkMax motor, DigitalInput limitSwitch) {
     this.motor = motor;
     this.limitSwitch = limitSwitch;
   }
@@ -23,7 +23,7 @@ public class BoardSubsystem implements Subsystem {
     motor.set(val);
   }
 
-  public getLimitSwitch() {
+  public DigitalInput getLimitSwitch() {
     return limitSwitch;
   }
 
