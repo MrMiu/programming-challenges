@@ -24,7 +24,7 @@ public class BoardCommand extends CommandBase {
   @Override
   public void execute() {
     SmartDashboard.putBoolean("Limit Switch", boardSubsystem.getSwitchValue());
-    SmartDashboard.putNumber("Motor Speed", boardSubsystem.getMotor().get());
+    SmartDashboard.putNumber("Motor Speed", boardSubsystem.getMotor().getEncoder().getVel());
     // The if statement might have an error
     if (boardSubsystem.getSwitchValue()) {
       // But this part (the body of the if statement) will not :)

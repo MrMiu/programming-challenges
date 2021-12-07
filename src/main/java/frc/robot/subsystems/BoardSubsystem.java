@@ -4,19 +4,20 @@ import com.revrobotics.CANSparkMax;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj2.command.Subsystem;
+import frc.robot.devices.CANSparkMaxMotor;
 
 public class BoardSubsystem implements Subsystem {
   
-  CANSparkMax motor;
+  CANSparkMaxMotor motor;
   DigitalInput limitSwitch;
 
   /** Creates a new Subsystem. */
-  public BoardSubsystem(CANSparkMax motor, DigitalInput limitSwitch) {
+  public BoardSubsystem(CANSparkMaxMotor motor, DigitalInput limitSwitch) {
     this.motor = motor;
     this.limitSwitch = limitSwitch;
   }
 
-  public CANSparkMax getMotor() {
+  public CANSparkMaxMotor getMotor() {
     return motor;
   }
 
