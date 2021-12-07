@@ -6,6 +6,11 @@ package frc.robot;
 
 import frc.robot.commands.BoardCommand;
 import frc.robot.subsystems.BoardSubsystem;
+
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj2.command.Command;
 
 /**
@@ -22,7 +27,8 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    boardSubsystem = new BoardSubsystem();
+    boardSubsystem = new BoardSubsystem(new CANSparkMax(Constants.boardMotorID, MotorType.kBrushless), new DigitalInput(Constants.digitalSwitchPort));
+
     boardCommand = new BoardCommand(boardSubsystem);
   }
 
