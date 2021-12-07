@@ -3,22 +3,16 @@ package frc.robot.subsystems;
 import com.revrobotics.CANSparkMax;
 
 import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.Ultrasonic;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 
 public class BoardSubsystem implements Subsystem {
   
   CANSparkMax motor;
   DigitalInput limitSwitch;
-  Ultrasonic ultrasonic;
 
-  /** Creates a new Subsystem. */
-  public BoardSubsystem(CANSparkMax motor, DigitalInput limitSwitch, Ultrasonic ultrasonic) {
+  public BoardSubsystem() {
     this.motor = motor;
     this.limitSwitch = limitSwitch;
-    this.ultrasonic = ultrasonic;
-
-    Ultrasonic.setAutomaticMode(true);
   }
 
   public CANSparkMax getMotor() {
@@ -29,20 +23,12 @@ public class BoardSubsystem implements Subsystem {
     
   }
 
-  public DigitalInput getLimitSwitch() {
+  public getLimitSwitch() {
     return limitSwitch;
   }
 
   public boolean getSwitchValue() {
     return limitSwitch.get();
-  }
-
-  public Ultrasonic getUltrasonic() {
-    return ultrasonic;
-  }
-
-  public double getUltrasonicValue() {
-    return ultrasonic.getRangeInches();
   }
 
   @Override
