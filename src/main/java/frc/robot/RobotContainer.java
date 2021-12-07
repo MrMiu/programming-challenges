@@ -26,7 +26,7 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    boardSubsystem = new BoardSubsystem(new CANSparkMax(Constants.boardMotorID, MotorType.kBrushless), new DigitalInput(Constants.digitalSwitchPort));
+    boardSubsystem = new BoardSubsystem(new CANSparkMax(Constants.boardMotorID, MotorType.kBrushed), new DigitalInput(Constants.digitalSwitchPort));
     boardCommand = new BoardCommand(boardSubsystem);
   }
 
