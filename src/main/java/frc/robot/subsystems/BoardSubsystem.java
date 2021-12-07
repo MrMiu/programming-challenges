@@ -31,7 +31,7 @@ public class BoardSubsystem implements Subsystem {
     motor.set(val);
   }
 
-  public getLimitSwitch() {
+  public DigitalInput getLimitSwitch() {
     return limitSwitch;
   }
 
