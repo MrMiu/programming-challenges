@@ -20,7 +20,7 @@ public class BoardSubsystem implements Subsystem {
   }
 
   public void setMotor(double val) { 
-    
+    motor.set(val);
   }
 
   public DigitalInput getLimitSwitch() {
