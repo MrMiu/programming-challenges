@@ -63,13 +63,13 @@ public class Robot extends TimedRobot {
    *  This is where your code will be tested in this challenge 
    */
   @Override
-  public void teleopInit() {
-    robotContainer.getBoardCommand().schedule();
-  }
+  public void teleopInit() {}
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    robotContainer.getBoardCommand().schedule();
+  }
 
   @Override
   public void testInit() {
