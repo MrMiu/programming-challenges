@@ -14,5 +14,5 @@ package frc.robot;
  */
 public final class Constants {
     public static int boardMotorID = 3;
-    public static int digitalSwitchPort = 13;
+    public static int digitalSwitchPort = 0;
 }
