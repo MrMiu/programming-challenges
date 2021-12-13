@@ -12,8 +12,8 @@ public class BoardSubsystem implements Subsystem {
 
   /** Creates a new Subsystem. */
   public BoardSubsystem() {
-    this.motor = motor;
-    this.limitSwitch = limitSwitch;
+    this.motor;
+    this.limitSwitch;
   }
 
   public CANSparkMax getMotor() {
@@ -29,7 +29,7 @@ public class BoardSubsystem implements Subsystem {
   }
 
   public boolean getSwitchValue() {
-    return limitSwitch.get();
+    return limitSwitch.getValue();
   }
 
   @Override
