@@ -62,6 +62,15 @@ dependencies {
     // Websocket extensions require additional configuration.
     // simulation wpi.deps.sim.ws_server(wpi.platforms.desktop, false)
     // simulation wpi.deps.sim.ws_client(wpi.platforms.desktop, false)
+
+    compile group: 'org.json', name: 'json', version: '20180813'
+
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://frcmaven.wpi.edu:443/artifactory/release" }
+
 }
 
 // Simulation configuration (e.g. environment variables).
@@ -70,10 +79,3 @@ sim {
     // envVar "HALSIMWS_HOST", "10.0.0.2"
 }
 
-// Setting up my Jar File. In this case, adding all libraries into the main jar ('fat jar')
-// in order to make them all available at runtime. Also adding the manifest so WPILib
-// knows where to look for our Robot Class.
-jar {
-    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
-    manifest edu.wpi.first.gradlerio.GradleRIOPlugin.javaManifest(ROBOT_MAIN_CLASS)
-}

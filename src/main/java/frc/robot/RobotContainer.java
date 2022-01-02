@@ -8,9 +8,13 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.DigitalInput;
+import frc.robot.autonomous.AutoBoardCommand;
+import frc.robot.autonomous.CougarScriptObject;
+import frc.robot.autonomous.CougarScriptReader;
 import frc.robot.commands.BoardCommand;
 import frc.robot.subsystems.BoardSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.Subsystem;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -21,7 +25,6 @@ import edu.wpi.first.wpilibj2.command.Command;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final BoardSubsystem boardSubsystem;
-
   private final BoardCommand boardCommand;
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
@@ -32,5 +35,9 @@ public class RobotContainer {
 
   public Command getBoardCommand() {
     return boardCommand;
+  }
+
+  public BoardSubsystem getBoardSubsytem() {
+    return boardSubsystem;
   }
 }
