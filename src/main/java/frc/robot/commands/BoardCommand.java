@@ -1,14 +1,18 @@
 package frc.robot.commands;
 
+import frc.robot.Constants;
 import frc.robot.subsystems.BoardSubsystem;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 public class BoardCommand extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
   private final BoardSubsystem boardSubsystem;
+  Joystick joy;
 
-  public BoardCommand(BoardSubsystem boardSubsystem) {
+  public BoardCommand(BoardSubsystem boardSubsystem, Joystick joy) {
+    this.joy = joy;
     this.boardSubsystem = boardSubsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(boardSubsystem);
@@ -24,13 +28,18 @@ public class BoardCommand extends CommandBase {
   @Override
   public void execute() {
     SmartDashboard.putBoolean("Limit Switch", boardSubsystem.getSwitchValue());
-    SmartDashboard.putNumber("Motor Speed", boardSubsystem.getMotor().get());
-    // The if statement might have an error
-    if (boardSubsystem.getSwitchValue()) {
-      //But this part (the body of the if statement) will not :)
-      boardSubsystem.setMotor(0.3);
+    SmartDashboard.putNumber("Motor Speed", boardSubsystem.getMotor1().get());
+
+    if (joy.getRawButton(Constants.joyA)) {
+      boardSubsystem.setMotor1(0.3);
     } else{
-      boardSubsystem.setMotor(0);
+      boardSubsystem.setMotor1(0);
+    }
+
+    if (joy.getRawButton(Constants.joyB)) {
+      boardSubsystem.setMotor2(0.3);
+    } else{
+      boardSubsystem.setMotor2(0);
     }
   }
 
