@@ -13,6 +13,8 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static int boardMotorID = 12;
+    public static int boardMotor1ID = 12;
     public static int digitalSwitchPort = 0;
+    public static int joyA = 1;
+    public static int joyB = 2;
 }
