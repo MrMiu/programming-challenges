@@ -30,14 +30,14 @@ public class BoardCommand extends CommandBase {
     SmartDashboard.putBoolean("Limit Switch", boardSubsystem.getSwitchValue());
     SmartDashboard.putNumber("Motor Speed", boardSubsystem.getMotor1().get());
 
-    if (joy.getRawButton(Constants.joyA)) {
-      boardSubsystem.setMotor1(0.3);
+    if (joy.getRawButton(Constants.joyX)) {
+      boardSubsystem.setMotor1(1);
     } else{
       boardSubsystem.setMotor1(0);
     }
 
-    if (joy.getRawButton(Constants.joyB)) {
-      boardSubsystem.setMotor2(0.3);
+    if (joy.getRawButton(Constants.joyY)) {
+      boardSubsystem.setMotor2(1);
     } else{
       boardSubsystem.setMotor2(0);
     }

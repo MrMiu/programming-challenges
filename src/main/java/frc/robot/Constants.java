@@ -14,7 +14,8 @@ package frc.robot;
  */
 public final class Constants {
     public static int boardMotor1ID = 12;
+    public static int boardMotor2ID = 14;
     public static int digitalSwitchPort = 0;
-    public static int joyA = 1;
-    public static int joyB = 2;
+    public static int joyX = 3;
+    public static int joyY = 4;
 }
