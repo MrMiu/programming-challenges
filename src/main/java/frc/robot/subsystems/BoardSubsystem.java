@@ -10,6 +10,7 @@ public class BoardSubsystem implements Subsystem {
   
   CANSparkMax motor;
   DigitalInput limitSwitch;
+  string Motor;
 
   public BoardSubsystem(CANSparkMax motor, DigitalInput limitSwitch) {
     this.motor = motor;
@@ -17,7 +18,7 @@ public class BoardSubsystem implements Subsystem {
   }
 
   public CANSparkMax getMotor() {
-    return motor;
+    return Motor;
   }
 
   public void setMotor(double val) { 
@@ -28,8 +29,8 @@ public class BoardSubsystem implements Subsystem {
     return limitSwitch;
   }
 
-  public boolean getSwitchValue() {
-    return limitSwitch.get();
+  public int getSwitchValue() {
+    return limitSwitch.getAnalogTriggerTypeForRouting();
   }
 
   @Override

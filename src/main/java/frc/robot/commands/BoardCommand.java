@@ -28,7 +28,7 @@ public class BoardCommand extends CommandBase {
     // The if statement might have an error
     if (boardSubsystem.getSwitchValue()) {
       //But this part (the body of the if statement) will not :)
-      boardSubsystem.setMotor(0.3);
+      boardSubsystem.setMotor(1);
     } else{
       boardSubsystem.setMotor(0);
     }
